@@ -14,6 +14,7 @@ import { customerReducer } from './state/customer.reducer';
 import { CustomerEffect } from "./state/customer.effects";
 
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 const customerRoutes: Routes = [{ path: "", component: CustomerComponent }];
 
@@ -25,7 +26,8 @@ const customerRoutes: Routes = [{ path: "", component: CustomerComponent }];
     StoreModule.forFeature('customers', customerReducer),
     EffectsModule.forFeature([CustomerEffect]),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    InfiniteScrollModule
   ]
 })
 export class CustomersModule { }
