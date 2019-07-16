@@ -13,6 +13,12 @@ import { Customer } from "../customer.model";
 })
 export class CustomerListComponent implements OnInit {
 
+  scrollDistance = 2;
+
+  onScrollDown () {
+    console.log('scrolled down!!');
+  }
+
   customers$: Observable<Customer[]>;
   error$: Observable<String>;
 
